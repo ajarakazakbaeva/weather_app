@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Weather</title>
+</head>
+<body>
+
+<div>
+    <h2>Weather forecast for today</h2>
+    <h3>Location</h3>
+    <p3 th:text="${currentWeather.city}">City</p3>
+
+    <br>
+    <br>
+    <br>
+
+
+    <h3>Night</h3>
+    <h4>Temperature</h4>
+    <p4 th:text="${currentWeather.temperatureNight} + ' &#8457;'"></p4>
+    <h4>Description</h4>
+    <p4 th:text="${currentWeather.descriptionNight}"></p4>
+
+    <br>
+    <br>
+    <br>
+
+
+    <h3>Day</h3>
+    <h4>Temperature</h4>
+    <p4 th:text="${currentWeather.temperatureDay} + ' &#8457;'"></p4>
+    <h4>Description</h4>
+    <p4 th:text="${currentWeather.descriptionDay}"></p4>
+</div>
+</body>
+</html>
