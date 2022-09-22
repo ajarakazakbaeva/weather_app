@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Current Weather</title>
-</head>
-<body>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Weather forecast for today</h2>
 
-<div>
-    <h2>Weather forecast for today</h2>
-    <h3>Location</h3>
-    <p3 th:text="${currentWeather.city}">City</p3>
+      <div class="location">
+        <span>LOCATION</span>
+        <div class="city">
+          <h3 th:text="${currentWeather.city}">City</h3>
+        </div>
+      </div>
 
-    <br>
-    <br>
-    <br>
+      <div class="main">
+        <div class="forecast_block">
+            <div class="img__weather">
+               <img src="/images/weather.png" width="190px" height="190px" alt="">
+            </div>
+            
 
+            <div class="right_block">
 
-    <h3>Night</h3>
-    <h4>Temperature</h4>
-    <p4 th:text="${currentWeather.temperatureNight} + ' &#8457;'"></p4>
-    <h4>Description</h4>
-    <p4 th:text="${currentWeather.descriptionNight}"></p4>
+                <div class="day__temp">
+                        <span>DAY</span>
+                        <img class="daynight" src="/images/day.png" width="35px" height="35px" alt="">
+                        <div class="temp__main">
+                           
+                            <p4 class="temp__number" th:text="${currentWeather.temperatureDay}"></p4><span class="celcium__icon">°</span>
+                        </div>
+                            
+                        <h4>Description</h4>
+                        <p4 th:text="${currentWeather.descriptionDay}"></p4>
+                </div>
 
-    <br>
-    <br>
-    <br>
+                <div class="night__temp">
+                        <span>NIGHT</span>
+                        <img class="daynight" src="/images/night.png" width="35px" height="35px" alt="">
+                        <div class="temp__main">
+                            <p4 class="temp__number" th:text="${currentWeather.temperatureNight}"></p4><span class="celcium__icon">°</span>
+                        </div>
+                        <h4>Description</h4>
+                        <p4 th:text="${currentWeather.descriptionNight}"></p4>
+                </div>
 
+            </div>
 
-    <h3>Day</h3>
-    <h4>Temperature</h4>
-    <p4 th:text="${currentWeather.temperatureDay} + ' &#8457;'"></p4>
-    <h4>Description</h4>
-    <p4 th:text="${currentWeather.descriptionDay}"></p4>
-</div>
-</body>
+        </div>
+        
+
+      </div>
+
+      
+
+     
+    </div>
+  </body>
 </html>
