@@ -1,7 +1,8 @@
     body{
-        width: 1550px;
+        width: 100%;
         height: 1200px;
         background-image: linear-gradient(to bottom right,#e2ebec 10%, rgba(0, 112, 145, 0) 100%);
+        background-repeat: no-repeat;
         font-family: sans-serif;
         margin: 0;
         padding: 0;
@@ -49,6 +50,7 @@
     height: 300px;
     background-color: rgb(218, 212, 212);
     border-radius: 15px;
+    position: relative;
 
   }
 
@@ -79,7 +81,6 @@
 
   .temp__number{
     font-size: 40px;
-    font-weight: 900px;
     font-weight: bold;
   }
 
@@ -96,3 +97,19 @@
   .daynight{
     border-radius: 10px;
   }
+
+  .desc{
+  width: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 30px;
+  }
+
+  .desc-span{
+  width: 40%;
+  text-align: center;
+  font-size: 14px;
+  color: grey;
+  }
+

@@ -5,7 +5,7 @@
     <title>Current Weather</title>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body>
+  <body style="background-repeat: no-repeat;">
     <div class="container">
       <h2>Weather forecast for today</h2>
 
@@ -30,22 +30,28 @@
                         <img class="daynight" src="/images/day.png" width="35px" height="35px" alt="">
                         <div class="temp__main">
                            
-                            <p4 class="temp__number" th:text="${currentWeather.temperatureDay}"></p4><span class="celcium__icon">°</span>
+                            <span class="temp__number" th:text="${currentWeather.temperatureDay}"></span><span class="celcium__icon">°</span>
                         </div>
-                            
-                        <h4>Description</h4>
-                        <p4 th:text="${currentWeather.descriptionDay}"></p4>
                 </div>
 
                 <div class="night__temp">
                         <span>NIGHT</span>
                         <img class="daynight" src="/images/night.png" width="35px" height="35px" alt="">
                         <div class="temp__main">
-                            <p4 class="temp__number" th:text="${currentWeather.temperatureNight}"></p4><span class="celcium__icon">°</span>
+                            <span class="temp__number" th:text="${currentWeather.temperatureNight}"></span><span class="celcium__icon">°</span>
                         </div>
-                        <h4>Description</h4>
-                        <p4 th:text="${currentWeather.descriptionNight}"></p4>
                 </div>
+
+
+                <div class = "desc">
+                    <div class ="desc-span">
+                        <span th:text="${currentWeather.descriptionDay}" ></span>
+                    </div>
+                    <div class ="desc-span">
+                        <span th:text="${currentWeather.descriptionNight}" ></span>
+                    </div>
+                </div>
+
 
             </div>
 
